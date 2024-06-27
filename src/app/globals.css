@@ -1,0 +1,599 @@
+@import url("https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* suavidad al scrollear */
+html {
+	scroll-behavior: smooth;
+}
+
+:root {
+	--bgheaderdegradade: radial-gradient(
+		circle,
+		rgba(255, 255, 255, 0) 25%,
+		#020617 100%
+	);
+	--imageCircuitoInfo: url("/assets/images/circuito-about.png");
+	--bgCircuitoHeader: url("/assets/svgs/circuito.svg");
+	--bgCircuitoResponsiveHeader: url("/assets/svgs/circuitoresponsive.svg");
+}
+
+.pathway {
+	font-family: "Pathway Gothic One", sans-serif;
+	letter-spacing: 0.0625rem;
+}
+
+.circuitosbg {
+	width: 100%;
+	height: 100%;
+	/* background-color: #096bd4; */
+	position: absolute;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 1;
+}
+.circuitos__left,
+.circuitos__right {
+	width: 300px;
+	height: 100%;
+	margin-top: auto;
+	margin-bottom: auto;
+	/* background-color: #FEB031; */
+	background-image: var(--bgCircuitoHeader);
+	background-size: 120rem;
+	background-position: left;
+	background-repeat: no-repeat;
+}
+.circuitos__right {
+	background-position: right;
+}
+
+@media (width < 1000px) {
+	.circuitosbg {
+		justify-content: center;
+		align-items: center;
+	}
+	.circuitos__right {
+		display: none;
+	}
+	.circuitos__left {
+		width: 100%;
+	}
+	.circuitos__left {
+		/* background-color: #FEB031; */
+		background-image: var(--bgCircuitoResponsiveHeader);
+		background-size: 130rem;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+}
+
+@media (width < 580px) {
+	.circuitos__left {
+		background-size: 80rem;
+	}
+}
+
+.bg-gradient-masna::after {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: var(--bgheaderdegradade);
+	z-index: 0;
+}
+
+.cybertext {
+	position: relative;
+	overflow: hidden;
+	font-weight: 900;
+	color: #fafafa;
+	text-transform: uppercase;
+	letter-spacing: 0.125rem;
+}
+
+.cybertext::after,
+.cybertext::before {
+	position: absolute;
+	content: attr(data-text);
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+.cybertext::before {
+	left: 4px;
+	text-shadow: -4px 0 red;
+	animation: effect-1 2s 0s linear reverse infinite;
+}
+.cybertext::after {
+	left: -4px;
+	text-shadow: -4px 0 aqua;
+	animation: effect-2 3s 0s linear reverse infinite;
+}
+
+@keyframes effect-1 {
+	0% {
+		clip: rect(132px, auto, 101px, 0px);
+	}
+	5% {
+		clip: rect(17px, auto, 94px, 0px);
+	}
+	10% {
+		clip: rect(40px, auto, 66px, 0px);
+	}
+	15% {
+		clip: rect(87px, auto, 82px, 0px);
+	}
+	20% {
+		clip: rect(137px, auto, 61px, 0px);
+	}
+	25% {
+		clip: rect(34px, auto, 14px, 0px);
+	}
+	30% {
+		clip: rect(133px, auto, 74px, 0px);
+	}
+	35% {
+		clip: rect(76px, auto, 107px, 0px);
+	}
+	40% {
+		clip: rect(59px, auto, 10px, 0px);
+	}
+	45% {
+		clip: rect(29px, auto, 84px, 0px);
+	}
+	50% {
+		clip: rect(22px, auto, 67px, 0px);
+	}
+	55% {
+		clip: rect(67px, auto, 62px, 0px);
+	}
+	60% {
+		clip: rect(10px, auto, 105px, 0px);
+	}
+	65% {
+		clip: rect(78px, auto, 115px, 0px);
+	}
+	70% {
+		clip: rect(105px, auto, 13px, 0px);
+	}
+	75% {
+		clip: rect(15px, auto, 75px, 0px);
+	}
+	80% {
+		clip: rect(66px, auto, 39px, 0px);
+	}
+	85% {
+		clip: rect(133px, auto, 73px, 0px);
+	}
+	90% {
+		clip: rect(36px, auto, 128px, 0px);
+	}
+	95% {
+		clip: rect(68px, auto, 103px, 0px);
+	}
+	100% {
+		clip: rect(14px, auto, 100px, 0px);
+	}
+}
+@keyframes effect-2 {
+	0% {
+		clip: rect(129px, auto, 36px, 0px);
+	}
+	5% {
+		clip: rect(36px, auto, 4px, 0px);
+	}
+	10% {
+		clip: rect(85px, auto, 66px, 0px);
+	}
+	15% {
+		clip: rect(91px, auto, 91px, 0px);
+	}
+	20% {
+		clip: rect(148px, auto, 138px, 0px);
+	}
+	25% {
+		clip: rect(38px, auto, 122px, 0px);
+	}
+	30% {
+		clip: rect(69px, auto, 54px, 0px);
+	}
+	35% {
+		clip: rect(98px, auto, 71px, 0px);
+	}
+	40% {
+		clip: rect(146px, auto, 34px, 0px);
+	}
+	45% {
+		clip: rect(134px, auto, 43px, 0px);
+	}
+	50% {
+		clip: rect(102px, auto, 80px, 0px);
+	}
+	55% {
+		clip: rect(119px, auto, 44px, 0px);
+	}
+	60% {
+		clip: rect(106px, auto, 99px, 0px);
+	}
+	65% {
+		clip: rect(141px, auto, 74px, 0px);
+	}
+	70% {
+		clip: rect(20px, auto, 78px, 0px);
+	}
+	75% {
+		clip: rect(133px, auto, 79px, 0px);
+	}
+	80% {
+		clip: rect(78px, auto, 52px, 0px);
+	}
+	85% {
+		clip: rect(35px, auto, 39px, 0px);
+	}
+	90% {
+		clip: rect(67px, auto, 70px, 0px);
+	}
+	95% {
+		clip: rect(71px, auto, 103px, 0px);
+	}
+	100% {
+		clip: rect(83px, auto, 40px, 0px);
+	}
+}
+
+.wrapper-masna {
+	@apply px-4 md:px-[3%] mx-auto max-w-[1280px];
+}
+
+.section-masna {
+	@apply relative py-[50px] md:py-[100px];
+}
+
+.pieza {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0 auto;
+	transition: all 0.3s;
+}
+
+.cerebrosky {
+	top: 200px;
+	animation: floating 10s -1s infinite;
+}
+
+.burbujas-masna {
+	position: relative;
+	width: calc(76% - 8vw);
+	height: 86%;
+	z-index: 20;
+	overflow: hidden;
+}
+
+.burbujas-masna span {
+	bottom: -50px;
+	position: absolute;
+	background-color: transparent;
+	border: 1px solid rgba(0, 195, 255, 0.7);
+	pointer-events: none;
+	box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.3);
+	border-radius: 50%;
+	animation: burbujita 8.45s linear infinite;
+}
+
+.burbujas-masna span.rompido {
+	display: none;
+}
+
+.burbujas-masna span::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transform: scale(0.25) translate(-70%, -70%);
+	background: radial-gradient(#fff, transparent);
+	border-radius: 50%;
+}
+
+@keyframes burbujita {
+	0% {
+		transform: translateY(0%);
+		opacity: 1;
+	}
+	99% {
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(-1000px);
+		opacity: 0;
+	}
+}
+
+@keyframes floating {
+	0%,
+	100% {
+		transform: translateY(-50%);
+	}
+	50% {
+		transform: translateY(0) rotate(-6deg);
+	}
+}
+
+/* circuitos caunsa */
+.circuit-1::after {
+	position: absolute;
+	content: "";
+	width: 495px;
+	height: 120px;
+	background-image: var(--imageCircuitoInfo);
+	background-repeat: no-repeat;
+	background-position: center;
+	bottom: 44%;
+	right: -200px;
+}
+
+@media (width > 768px) {
+	.circuit-1::after {
+		bottom: -10%;
+	}
+}
+
+.stream-container {
+	position: relative;
+	background-color: hsl(213, 69%, 16%);
+	max-width: 900px;
+}
+
+.stream-container::after {
+	position: absolute;
+	content: "";
+	background-color: hsl(213, 69%, 10%);
+	top: 0;
+	width: 0;
+	height: 0;
+	border-right: 14px solid hsl(213, 69%, 16%);
+	border-top: 14px solid transparent;
+	border-left: 14px solid transparent;
+	border-bottom: 14px solid hsl(213, 69%, 16%);
+}
+
+.stream-container::before {
+	position: absolute;
+	content: "";
+	background-color: hsl(213, 69%, 10%);
+	bottom: 0;
+	right: 0;
+	width: 0;
+	height: 0;
+	border-right: 14px solid transparent;
+	border-top: 14px solid hsl(213, 69%, 16%);
+	border-left: 14px solid hsl(213, 69%, 16%);
+	border-bottom: 14px solid transparent;
+}
+
+.stream-start::after {
+	content: "";
+	position: absolute;
+	width: 28px;
+	height: 6px;
+	background-color: hsl(213, 69%, 10%);
+	right: -50px;
+	bottom: 0;
+}
+
+@media (width > 768px) {
+	.stream-end::before {
+		content: "";
+		position: absolute;
+		width: 10px;
+		height: 14px;
+		background-color: hsl(213, 69%, 10%);
+		right: 40px;
+		top: 0;
+	}
+
+	.stream-end::after {
+		content: "";
+		position: absolute;
+		width: 10px;
+		height: 14px;
+		background-color: hsl(213, 69%, 10%);
+		right: 20px;
+		top: 0;
+	}
+
+	.stream-start::before,
+	.stream-start::after {
+		display: none;
+	}
+}
+
+.stream-start::before {
+	content: "";
+	position: absolute;
+	width: 10px;
+	height: 14px;
+	background-color: hsl(213, 69%, 10%);
+	right: 40px;
+	top: 0;
+}
+
+.stream-start::after {
+	content: "";
+	position: absolute;
+	width: 10px;
+	height: 14px;
+	background-color: hsl(213, 69%, 10%);
+	right: 20px;
+	top: 0;
+}
+
+.team-clipath {
+	clip-path: polygon(
+		30px 0,
+		100% 0,
+		100% calc(100% - 30px),
+		calc(100% - 30px) 100%,
+		0 100%,
+		0 30px
+	);
+}
+
+.team-clipath-interno {
+	clip-path: polygon(
+		28px 0,
+		100% 0,
+		100% calc(100% - 0px),
+		calc(100% - 0px) 100%,
+		0 100%,
+		0 28px
+	);
+}
+
+.team-nombre::after {
+	content: "";
+	width: 90%;
+	height: 1px;
+	background-color: #061322;
+	position: absolute;
+	bottom: -3px;
+}
+
+.team-clip-card {
+	clip-path: polygon(
+		0 0,
+		100% 0,
+		calc(100% - 0px) 100%,
+		calc(100% - 50px) 100%,
+		calc(100% - 55px) calc(100% - 10px),
+		calc(100% - 90px) calc(100% - 10px),
+		calc(100% - 95px) calc(100%),
+		0 100%
+	);
+}
+
+.bg-gradient-luz {
+	background: linear-gradient(
+		rgba(0, 0, 0, 0.3) 50%,
+		rgba(175, 175, 175, 0.5) 50%
+	);
+	background-size: 100% 1px;
+	border-radius: 2px;
+	background-color: rgba(255, 255, 255, 0);
+	top: 6px;
+	transition: all ease 0.5s;
+}
+
+.bg-gradient-luz.active {
+	background: #00ffce;
+	box-shadow: 0 1px 30px 1px rgba(0, 255, 204, 0.8);
+}
+
+.team-overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(13, 17, 23, 0.9);
+	bottom: 0;
+	display: flex;
+	align-items: flex-end;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	transition: all ease 0.25s;
+}
+
+.team-overlay-front {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(
+		rgba(230, 230, 230, 0.1) 50%,
+		rgba(39, 39, 39, 0.3) 50%
+	);
+	background-size: 100% 2px;
+	opacity: 0.5;
+	top: 0;
+}
+
+.almeydaBar {
+	--byAlmeydacolor: linear-gradient(
+		90deg,
+		#1fa88b,
+		#1be3b8,
+		#20edc1,
+		#1be3b8,
+		#1fa88b
+	);
+	--footerHeight: 30px;
+	background-color: rgba(0, 0, 0, 0.273);
+	color: #fff;
+	height: var(--footerHeight);
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 100;
+	width: 100%;
+	border: none;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+}
+
+.byAlmeyda {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.byAlmeyda {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	animation: byAlmeyda 20s linear infinite;
+	background: var(--byAlmeydacolor);
+	background-size: 400%;
+	z-index: 100;
+}
+
+@keyframes byAlmeyda {
+	0% {
+		background-position: 0%;
+	}
+	50% {
+		background-position: 400%;
+	}
+	100% {
+		background-position: 0%;
+	}
+}
+
+.byAlmeyda::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	filter: blur(18px);
+	opacity: 0.45;
+	animation: byAlmeyda 20s linear infinite;
+	background: var(--byAlmeydacolor);
+	background-size: 400%;
+	backdrop-filter: blur(20px);
+	transition: all 0.5s ease;
+}
+
+.almeydaBar:hover .byAlmeyda::before {
+	opacity: 1;
+}
